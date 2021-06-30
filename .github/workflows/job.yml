@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/test-composite-action@v1
+      - uses: oknozor/test-composite-action@v1
