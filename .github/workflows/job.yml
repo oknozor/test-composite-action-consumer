@@ -15,4 +15,4 @@ jobs:
            check: true
            check-latest-tag-only: true
            release: true
-           git-user-email: paul.delafosse@protonmail.com
+           git-user-email: 'paul.delafosse@protonmail.com'
