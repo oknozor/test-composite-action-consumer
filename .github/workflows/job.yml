@@ -11,8 +11,3 @@ jobs:
 
       - name: Conventional commits compliance
         uses: oknozor/cog-conventional-check@v0.5.13
-        with:
-           check: true
-           check-latest-tag-only: true
-           release: true
-           git-user-email: 'paul.delafosse@protonmail.com'
