@@ -10,7 +10,7 @@ jobs:
           fetch-depth: 0
 
       - name: Conventional commits compliance
-        uses: oknozor/cog-conventional-check@v0.5.3
+        uses: oknozor/cog-conventional-check@v0.5.4
         with:
            check: true
            check-latest-tag-only: true
