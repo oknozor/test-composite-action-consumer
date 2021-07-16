@@ -1,12 +1,17 @@
-name : CI
-
-on:
-  push:
-  pull_request:
+on: [push]
 
 jobs:
-  ci:
+  cog_check_job:
     runs-on: ubuntu-latest
-
+    name: check conventional commit compliance
     steps:
-      - uses: oknozor/test-composite-action@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Conventional commits compliance
+        uses: oknozor/cog-conventional-check@v0.5
+        with:
+           check: true
+           check-latest-tag-only: true
+           release: true
