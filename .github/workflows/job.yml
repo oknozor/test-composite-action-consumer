@@ -10,8 +10,9 @@ jobs:
           fetch-depth: 0
 
       - name: Conventional commits compliance
-        uses: oknozor/cog-conventional-check@v0.5.8
+        uses: oknozor/cog-conventional-check@v0.5.9
         with:
            check: true
            check-latest-tag-only: true
            release: true
+           git-user-email: paul.delafosse@protonmail.com
