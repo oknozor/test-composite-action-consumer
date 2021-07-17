@@ -5,7 +5,7 @@ authors = [
 ]
 
 pre_bump_hooks = [
-    "sh -c \"echo {{version}} > version\"",
+    "echo {{version}} > version",
 ]
 
 # A list of command to run AFTER creating a version.
@@ -15,7 +15,7 @@ post_bump_hooks = [
     "git push origin {{version}}",
     "git checkout develop",
     "git rebase main",
-    "sh -c \"echo {{version+1minor-pre}} > version\"",
+    "echo {{version+1minor-pre}} > version",
     "coco chore \"bump snapshot to {{version+1minor-pre}}\"",
     "git push",
 ]
