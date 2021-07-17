@@ -1,0 +1,16 @@
+name: Conventional commit check from latest tag
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    name: check conventional commit compliance
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Conventional commit check from latest tag
+        uses: oknozor/cocogitto-action@v1
+        with:
+          check-latest-tag-only: true
