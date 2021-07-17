@@ -15,6 +15,7 @@ post_bump_hooks = [
     "git checkout develop",
     "git rebase main",
     "sh -c \"echo {{version+1minor-pre}} > version\"",
+    "echo {{version+1minor-pre}} > version",
     "git add version",
     "coco chore 'bump snapshot to {{version+1minor-pre}}'",
     "git push",
