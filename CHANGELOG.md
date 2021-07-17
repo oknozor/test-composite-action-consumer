@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.6.0 - 2021-07-17
+
+
+### Features
+
+[485e9d](https://github.com/oknozor/cocogitto-action/commit/485e9d353aa68c55858f9c0424d74ed8decc9ddc) - dummy changes - [oknozor](https://github.com/oknozor)
+
+
+- - -
 ## 0.5.0 - 2021-07-17
 
 
