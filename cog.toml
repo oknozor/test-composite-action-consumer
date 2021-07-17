@@ -9,6 +9,7 @@ pre_bump_hooks = [
 ]
 
 # Dummmy changes
+# Dummmy changes
 post_bump_hooks = [
     "git push",
     "git push origin {{version}}",
