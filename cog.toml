@@ -8,8 +8,7 @@ pre_bump_hooks = [
     "echo {{version}} > version",
 ]
 
-# A list of command to run AFTER creating a version.
-# `{{version}}` will be interpretted as your target version
+# Dummmy changes
 post_bump_hooks = [
     "git push",
     "git push origin {{version}}",
