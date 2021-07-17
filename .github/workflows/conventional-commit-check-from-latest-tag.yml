@@ -11,6 +11,6 @@ jobs:
           fetch-depth: 0
 
       - name: Conventional commit check from latest tag
-        uses: oknozor/cocogitto-action@v1
+        uses: actions/cocogitto-action@v1
         with:
           check-latest-tag-only: true
