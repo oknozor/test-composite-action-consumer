@@ -1,7 +1,8 @@
-on: [push]
+name: Conventional commit check
+on: [push, pull_request]
 
 jobs:
-  cog_check_job:
+  check:
     runs-on: ubuntu-latest
     name: check conventional commit compliance
     steps:
@@ -9,5 +10,5 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Conventional commits compliance
-        uses: oknozor/cog-conventional-check@v0.5.13
+      - name: Conventional commit check
+        uses: oknozor/cocogitto-action@v1
