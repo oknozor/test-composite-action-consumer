@@ -14,10 +14,9 @@ post_bump_hooks = [
     "git push",
     "git push origin {{version}}",
     "git checkout develop",
-    "git pull",
     "git rebase main",
     "sh -c 'echo {{version+1minor-pre}} > version'",
     "git add version",
     "git commit -m 'chore bump snapshot to {{version+1minor-pre}}'",
-    "git push",
+    "git push --force-with-lease",
 ]
