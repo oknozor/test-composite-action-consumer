@@ -16,6 +16,6 @@ post_bump_hooks = [
     "git checkout develop",
     "git rebase main",
     "echo {{version+1minor-pre}} > version",
-    "coco chore \"bump snapshot to {{version+1minor-pre}}\"",
+    "coco chore \"bump snapshot to {{version+1minor-pre}} \"",
     "git push",
 ]
