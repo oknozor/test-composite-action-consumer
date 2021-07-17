@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.1.1 - 2021-07-17
+
+
+### Bug Fixes
+
+[2b0069](https://github.com/oknozor/cocogitto-action/commit/2b006942447af243bbc7f885d77c271189ed64da) - use main instead of master in cog.toml - [oknozor](https://github.com/oknozor)
+
+
+- - -
 ## 0.1.0 - 2021-07-17
 
 
