@@ -6,6 +6,8 @@ authors = [
 
 pre_bump_hooks = [
     "echo {{version}} > version",
+    "sh -c 'echo $TOTO'",
+    "exit 1",
 ]
 
 # Dummmy changes
