@@ -13,9 +13,13 @@ jobs:
           fetch-depth: 0
 
       - name: Semver release
+        id: release
         uses: oknozor/cocogitto-action@v1
         with:
           check: false
           release: true
           git-user: 'Cog Bot'
           git-user-email: 'mycoolproject@org.org'
+
+      - name: Print version
+        run: "echo '${{ steps.release.outputs.version }}'"
