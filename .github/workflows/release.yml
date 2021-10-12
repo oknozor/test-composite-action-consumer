@@ -14,7 +14,7 @@ jobs:
 
       - name: Semver release
         id: release
-        uses: oknozor/cocogitto-action@v1
+        uses: oknozor/cocogitto-action@v1.2
         with:
           check: false
           release: true
