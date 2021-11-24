@@ -17,10 +17,10 @@ jobs:
           check: false
 
       - name: Generate Changelog
-        run: cog changelog > CHANGELOG.md
+        run: cog changelog > GITHUB_CHANGELOG.md
 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          body_path: CHANGELOG.txt
+          body_path: GITHUB_CHANGELOG.txt
