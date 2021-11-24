@@ -2,24 +2,25 @@ name: Release
 
 on:
   workflow_dispatch:
-
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
-    name: check conventional commit compliance
     steps:
-      - uses: actions/checkout@v2
-        with:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with: 
           fetch-depth: 0
 
-      - name: Semver release
-        id: release
-        uses: oknozor/cocogitto-action@v1.2
+      - name: Conventional commit check
+        uses: oknozor/cocogitto-action@v1
         with:
           check: false
-          release: true
-          git-user: 'Cog Bot'
-          git-user-email: 'mycoolproject@org.org'
 
-      - name: Print version
-        run: "echo '${{ steps.release.outputs.version }}'"
+      - name: Generate Changelog
+        run: cog changelog > ${{ github.workspace }}-CHANGELOG.md
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: ${{ github.workspace }}-CHANGELOG.txt

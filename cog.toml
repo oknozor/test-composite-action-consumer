@@ -16,3 +16,8 @@ post_bump_hooks = [
     "git commit -m 'chore bump snapshot to {{version+1minor-pre}}'",
     "git push --force-with-lease",
 ]
+
+[changelog]
+authors = [
+  { username = "oknozor", signature = "Paul Delafosse" }
+]
